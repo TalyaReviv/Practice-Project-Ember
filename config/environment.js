@@ -42,6 +42,6 @@ module.exports = function (environment) {
   if (environment === 'production') {
     // here you can enable a production-specific feature
   }
-
+  ENV.APIKEY = '8j7t0np4nHcDaTHN6tXFt4eJc8AWJ2ZT';
   return ENV;
 };
