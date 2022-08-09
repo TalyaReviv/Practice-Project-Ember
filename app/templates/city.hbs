@@ -1,0 +1,21 @@
+{{page-title "City"}}
+<main >
+<div class="top-section text-center">
+<form class=" mt-5" id="form-city" {{action this.getDailyForecast true on="submit"}}>
+{{input class="form-control" id="name-city" type="text" value=this.name disabled=true}}
+<button class="btn" type="submit">get</button>
+</form>
+</div>
+<h1 class="text-center">
+{{@model.city.name}}
+</h1>
+
+<div class="result-section container text-center">
+    {{#each @model.dailyForecasts as |daily|}}
+     <DailyCard @singleDay={{daily}} />
+
+    {{/each}}
+</div>
+
+</main>
+{{outlet}}

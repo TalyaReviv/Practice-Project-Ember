@@ -1,0 +1,24 @@
+ <div class="col-md-2">
+    <div class="card">
+        <div class="card-body text-center">
+           <div class="icon-weather">
+            <img src={{concat "../assets/icons/conditions/" @singleDay.iconId ".svg"}} alt={{@singleDay.iconId}}>
+        </div>
+        <div>
+            <div class="description">
+                {{@singleDay.iconPhrase}}
+            </div>
+
+            <div class="temp">
+                {{temperature @singleDay.minTemp @singleDay.maxTemp}} 
+            </div>
+            
+            <div class="date">
+                {{format-date @singleDay.date}}
+            </div>
+        </div>
+        </div>
+    </div>
+</div>    
+
+{{yield}}
