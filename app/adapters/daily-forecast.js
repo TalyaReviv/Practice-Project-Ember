@@ -8,8 +8,7 @@ export default class DailyForecastAdapter extends DS.RESTAdapter {
   namespace = 'forecasts/v1/daily/5day';
 
   query(store, type, query) {
-
-    const city_id = query;
+    let city_id = query;
     if (city_id === undefined) {
       city_id = '213225';
     }
