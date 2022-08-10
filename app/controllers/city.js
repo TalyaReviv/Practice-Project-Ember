@@ -5,7 +5,7 @@ import jQuery from 'jquery';
 export default class CityController extends Controller {
   getDailyForecast() {
     //why this id?
-    const cityName = jQuery('#form-city input').val();
+    const cityName = jQuery('#name-city').val();
     // console.log(cityName);
     let url = window.location.href;
     // console.log(url.indexOf('city'));
