@@ -9,11 +9,12 @@ module('Integration | Helper | temperature', function (hooks) {
 
   // TODO: Replace this with your real tests.
   test('it renders', async function (assert) {
-    this.set('inputValue', '1234');
+    this.set('inputValueMin', '48');
+    this.set('inputValueMax', '64');
 
-    await render(hbs`{{temperature this.inputValue}}`);
+    await render(hbs`{{temperature this.inputValueMin this.inputValueMax}}`);
 
-    assert.dom(this.element).hasText('1234');
+    assert.dom(this.element).hasText(' 8° - 17°');
   });
 
   test('temperature works', function(assert) {
